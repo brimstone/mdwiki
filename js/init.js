@@ -19,6 +19,7 @@
     $.md.config = {
         title:  null,
         useSideMenu: true,
+        noNavOn: [],
         lineBreaks: 'gfm',
         additionalFooterText: '',
         anchorCharacter: '&para;',

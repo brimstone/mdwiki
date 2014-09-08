@@ -294,7 +294,8 @@
         });
 
         $.md.stage('transform').subscribe(function(done) {
-            if (navMD === '') {
+            // Allow for the config option noNavOn to block the loading of the navigation partial
+            if (navMD === '' || !$.inArray($.md.mainHref, $.md.config.noNavOn)) {
                 var log = $.md.getLogger();
                 log.info('no navgiation.md found, not using a navbar');
                 done();
