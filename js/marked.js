@@ -234,7 +234,7 @@ Lexer.prototype.token = function(src, top) {
       src = src.substring(cap[0].length);
       this.tokens.push({
         type: 'heading',
-        depth: cap[2] === '=' ? 1 : 2,
+        depth: cap[2] === '=' ? 1 : 3,
         text: cap[1]
       });
       continue;
