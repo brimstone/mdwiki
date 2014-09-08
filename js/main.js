@@ -171,10 +171,10 @@
                     var num_preview_elements = parseInt(text.substring(8), 10) ||3;
                     var $preview = selectPreviewElements ($html, num_preview_elements);
                     $preview.last().append('<a href="' + href +'"> ...read more &#10140;</a>');
-                    $preview.insertBefore($el.parent('p').eq(0));
+                    $preview.insertBefore($el);
                     $el.remove();
                 } else {
-                    $html.insertAfter($el.parents('p'));
+                    $html.insertAfter($el);
                     $el.remove();
                 }
             }).always(function () {
